@@ -1,21 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Card from './components/PayBill';
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar style='auto' />
+      <Text style={styles.text}>Pay the Bill</Text>
+      <Card />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#368980',
     alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
+  text: {
+    marginTop: 70,
+    fontSize: 30,
+    color: '#62CCC0',
+    fontWeight: 'bold',
   },
 });
+
+export default App;
